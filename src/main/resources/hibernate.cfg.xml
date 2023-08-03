@@ -4,12 +4,20 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
+    <!--    adding database driver-->
     <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <!--    adding connection url-->
     <property name="connection.url">jdbc:mysql://localhost:3306/student</property>
+    <!--    adding user_name -->
     <property name="connection.username">root</property>
+    <!--    adding password -->
     <property name="connection.password">1234</property>
+    <!--      configures the Hibernate dialect for the MySQL database-->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <!--      configures to show the sql queries -->
     <property name="hibernate.show_sql">true</property>
+    <!--      configures the Hibernate behavior for creating and dropping database tables during application -->
+    <!--      startup and shutdown-->
     <property name="hibernate.hbm2ddl.auto">update</property>
   </session-factory>
 </hibernate-configuration>
